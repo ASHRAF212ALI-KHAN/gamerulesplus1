@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "id": "gamerulesplus",
+  "version": "1.0.0",
+  "name": "Gamerules Plus",
+  "description": "Extra gamerules for mobs",
+  "authors": ["Ashraf"],
+  "environment": "*",
+  "entrypoints": {
+    "main": ["com.example.gamerulesplus.GamerulesPlus"]
+  },
+  "depends": {
+    "fabricloader": ">=0.15.11",
+    "minecraft": "1.21.1"
+  }
+}
