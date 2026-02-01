@@ -16,12 +16,16 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
-      - uses: gradle/gradle-build-action@v3
+      - name: Setup Gradle 8.6 (Fabric compatible)
+        uses: gradle/actions/setup-gradle@v3
+        with:
+          gradle-version: 8.6
 
       - name: Build mod
-        run: gradle build --no-daemon --no-build-cache
+        run: gradle build --no-daemon
 
-      - uses: actions/upload-artifact@v4
+      - name: Upload JAR
+        uses: actions/upload-artifact@v4
         with:
           name: gamerulesplus-jar
           path: build/libs/*.jar
